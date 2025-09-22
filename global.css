@@ -1,0 +1,16 @@
+.bordaSuperior {
+    background-color: rgb(44, 43, 43);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.btnMenu {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
