@@ -14,3 +14,59 @@
     border: none;
     border-radius: 5px;
 }
+
+.tituloMenu {
+    border-bottom: 2px solid rgb(35, 33, 199);
+}
+
+.subtituloMenu {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.links {
+    padding-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.btnModal {
+    background-color: white;
+    color: black;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.icones {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.modal {
+    --bs-modal-width: 800px;
+}
+
+.form-conteniner{
+    margin: 10px;
+}
+
+#btnEnvio {
+    background-color: rgb(70, 180, 103);
+    border-radius: 5px;
+    border: white;
+    color: white;
+    padding: 10px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+
+.btnForm {
+    background-color: steelblue;
+    border-radius: 5px;
+    border: white;
+    color: white;
+}
+

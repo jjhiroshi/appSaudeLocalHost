@@ -19,6 +19,7 @@
         </div>
     </header>
 
+    
 
 
 
@@ -37,17 +38,218 @@
 
 
 
-
-    <!-- Section with code of menu of App -->
+    <!-- Offcanvas: Menu lateral que acessa os links para as funcionalidades do App -->
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">MENU</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <p>Try scrolling the rest of the page to see this option in action.</p>
+            <!--  Abaixo contém os links para os modais do Menu Lateral  -->
+            <ul>
+                <h5 class="tituloMenu">RADIOGRAFIA</h5>
+                <li class="subtituloMenu">
+                    <a href="/index.html" class="links"><img src="/public/img/receipt.svg" class="icones" alt="icone de protocolo"/>Gerar Novo Protocolo</a>
+                </li>
+                <li class="subtituloMenu">
+                    <button type="button" class="btnModal" data-bs-toggle="modal" data-bs-target="#consultaRadiografia">
+                        <img src="/public/img/search.svg" class="icones" alt="icone de protocolo"/>Consultar Solicitações Anteriores
+                    </button>
+                </li>
+                <li class="subtituloMenu">
+                    <button type="button" class="btnModal" data-bs-toggle="modal" data-bs-target="#relatorioRadiografia">
+                        <img src="/public/img/document.svg" class="icones" alt="icone de protocolo"/>Emitir Relatório de Envio
+                    </button>
+                </li>
+            </ul>
+            <ul>
+                <h5 class="tituloMenu">PSICOLOGIA</h5>
+                <li class="subtituloMenu">
+                    <a href="/index.html" class="links"><img src="/public/img/receipt.svg" class="icones" alt="icone de protocolo"/>Gerar Novo Protocolo</a>
+                </li>
+                <li class="subtituloMenu">
+                    <button type="button" class="btnModal" data-bs-toggle="modal" data-bs-target="#consultaPsicologia">
+                        <img src="/public/img/search.svg" class="icones" alt="icone de protocolo"/>Consultar Solicitações Anteriores
+                    </button>
+                </li>
+                <li class="subtituloMenu">
+                    <button type="button" class="btnModal" data-bs-toggle="modal" data-bs-target="#relatorioPsicologia">
+                        <img src="/public/img/document.svg" class="icones" alt="icone de protocolo"/>Emitir Relatório de Envio
+                    </button>
+                </li>
+            </ul>
+            <ul>
+                <h5 class="tituloMenu">PACIENTE</h5>
+                <li>
+                    <p>Alterar Cadastro</p>
+                </li>
+                
+            </ul>
         </div>
     </div>
+    <!-- FIM DO OFFCANVAS - Menu lateral -->
+
+    <!-- MODAIS -->
+
+    <!-- Modal: Consultar Solicitações de Radiografias-->
+    <article class="modal fade" id="consultaRadiografia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Consultar Solicitações Anteriores - Radiografia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Realizar busca por SIS ou por parte do NOME do paciente:</h6>
+                    <!-- Pesquisa por SIS -->
+                    <form class="input-group mb-3">
+                        <span class="input-group-text">SIS</span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="sis">
+                            <label for="floatingInputGroup1">CARTÃO SIS - SEM TRAÇOS OU PONTOS - </label>
+                        </div>
+                        <button type="submit" class="btnForm">Pesquisar</button>
+                    </form>
+                    <!-- Pesquisa por NOME -->
+                    <form class="input-group mb-3">
+                        <span class="input-group-text">NOME</span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nome" oninput="this.value = this.value.toUpperCase();">
+                            <label for="floatingInputGroup1">PARTE DO NOME DO PACIENTE</label>
+                        </div>
+                        <button type="submit" class="btnForm">Pesquisar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Modal: Consultar Solicitações de Psicologia-->
+    <article class="modal fade" id="consultaPsicologia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Consultar Solicitações Anteriores - Psicologia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Realizar busca por SIS ou por parte do NOME do paciente:</h6>
+                    <!-- Pesquisa por SIS -->
+                    <form class="input-group mb-3">
+                        <span class="input-group-text">SIS</span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="sis">
+                            <label for="floatingInputGroup1">CARTÃO SIS - SEM TRAÇOS OU PONTOS - </label>
+                        </div>
+                        <button type="submit" class="btnForm">Pesquisar</button>
+                    </form>
+                    <!-- Pesquisa por NOME -->
+                    <form class="input-group mb-3">
+                        <span class="input-group-text">NOME</span>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="nome" oninput="this.value = this.value.toUpperCase();">
+                            <label for="floatingInputGroup1">PARTE DO NOME DO PACIENTE</label>
+                        </div>
+                        <button type="submit" class="btnForm">Pesquisar</button>
+                    </form>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Modal: Emitir Relatórios de Solicitações de Radiografia-->
+    <article class="modal fade" id="relatorioRadiografia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Emitir Relatórios - Radiografias</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Gerar Relatório do Próximo Envio -->
+                    <div class="form-conteniner">
+                        <h6 class="">Enviar o próximo lote de solicitações:</h6>
+                        <button type="button" id="btnEnvio">Emitir RELATÓRIO</button>
+                    </div>
+                    <!-- Pesquisar os relatórios já enviados -->
+                    <div class="form-conteniner">
+                        <h6 class="">Pesquisar os Relatórios emitidos filtrando por período:</h6>
+                        
+                        <form class="input-group mb-3">
+                            <span class="input-group-text">INICIO</span>
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="dataInicio">
+                                <label for="floatingInputGroup1">DATA INICIAL</label>
+                            </div>
+                            <span class="input-group-text">FINAL</span>
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="dataInicio">
+                                <label for="floatingInputGroup1">DATA INICIAL</label>
+                            </div>
+                            <button type="submit" class="btnForm">Pesquisar</button>
+                        </form>
+                    </div>
+                    
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Modal: Emitir Relatórios de Solicitações de Psicologia-->
+    <article class="modal fade" id="relatorioPsicologia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Emitir Relatórios - Radiografias</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Gerar Relatório do Próximo Envio -->
+                    <div class="form-conteniner">
+                        <h6 class="">Enviar o próximo lote de solicitações:</h6>
+                        <button type="button" id="btnEnvio">Emitir RELATÓRIO</button>
+                    </div>
+                    <!-- Pesquisar os relatórios já enviados -->
+                    <div class="form-conteniner">
+                        <h6 class="">Pesquisar os Relatórios emitidos filtrando por período:</h6>
+                        
+                        <form class="input-group mb-3">
+                            <span class="input-group-text">INICIO</span>
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="dataInicio">
+                                <label for="floatingInputGroup1">DATA INICIAL</label>
+                            </div>
+                            <span class="input-group-text">FINAL</span>
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="dataInicio">
+                                <label for="floatingInputGroup1">DATA INICIAL</label>
+                            </div>
+                            <button type="submit" class="btnForm">Pesquisar</button>
+                        </form>
+                    </div>
+                    
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- FIM DOS MODAIS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
