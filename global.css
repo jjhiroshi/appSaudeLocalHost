@@ -70,3 +70,63 @@
     color: white;
 }
 
+.banner {
+    background-color: rgba(182, 178, 178, 0.329);
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.banner-text {
+    margin-left: 20px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;  
+}
+
+.title {
+    margin: 1px;
+    font-size: 18px;
+}
+
+.subtitle {
+    margin: 1px;
+    font-size: 16px;
+}
+
+.formulario {
+    margin: 20px;
+    background-color:rgba(182, 178, 178, 0.329);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.subtitle2 {
+    margin: 1px;
+    font-size: 14px;
+}
+
+.formPaciente {
+    display: flex;
+}
+
+#dataDoPedido {
+    width: 200px;
+    margin-right: 10px;
+}
+
+#sis {
+    width: 200px;
+    margin-right: 10px;
+}
+
+#nome {
+    width: 800px;
+    margin-right: 10px;
+}
+
+.formRadiografias {
+    margin-top: 10px;
+}
