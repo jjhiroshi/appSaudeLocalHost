@@ -108,25 +108,8 @@
     font-size: 14px;
 }
 
-.formPaciente {
-    display: flex;
-}
 
 #dataDoPedido {
     width: 200px;
     margin-right: 10px;
-}
-
-#sis {
-    width: 200px;
-    margin-right: 10px;
-}
-
-#nome {
-    width: 800px;
-    margin-right: 10px;
-}
-
-.formRadiografias {
-    margin-top: 10px;
 }

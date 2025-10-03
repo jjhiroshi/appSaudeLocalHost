@@ -59,18 +59,21 @@
         <form action="gerarProtocolo.php" method="post" onsubmit="return validarCheckBox()">
             <section class="formPaciente">
                 <!-- Seção de Campos do Formulário: Data, SIS e Nome -->
-                <div class="form-floating">
-                    <input type="date" class="form-control" id="dataDoPedido" value="<?php echo date('Y-m-d'); ?>">
-                    <label for="floatingInputValue m-1">Data do Pedido</label>
+                 <div class="d-flex mb-3">
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="dataDoPedido" value="<?php echo date('Y-m-d'); ?>">
+                        <label for="floatingInputValue m-1">Data do Pedido</label>
+                    </div>
+                    <div class="form-floating w-25">
+                        <input type="text" class="form-control" id="sis" onblur="buscarPaciente()" required>
+                        <label for="floatingInputValue m-1">SIS (sem traços ou pontos)</label>
+                    </div>
                  </div>
-                 <div class="form-floating">
-                    <input type="text" class="form-control" id="sis" onblur="buscarPaciente()" required>
-                    <label for="floatingInputValue m-1">SIS (sem traços ou pontos)</label>
-                 </div>
-                 <div class="form-floating">
-                    <input type="text" class="form-control" id="nome" onblur="salvarPaciente()" required>
-                    <label for="floatingInputValue m-1 letramaiuscula">NOME COMPLETO DO PACIENTE</label>
+                 <div class="form-floating w-50 mb-3">
+                        <input type="text" class="form-control" id="nome" onblur="salvarPaciente()" required>
+                        <label for="floatingInputValue m-1 letramaiuscula">NOME COMPLETO DO PACIENTE</label>
                 </div>
+                 
             </section>
             
             <section class="formRadiografias" >
